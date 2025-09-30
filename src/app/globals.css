@@ -224,7 +224,7 @@ body {
   height: 300%;
 }
 
-/* Custom Range Slider Styles */
+/* Custom Range Slider Styles - Pink/Magenta Theme */
 input[type="range"].slider {
   -webkit-appearance: none;
   appearance: none;
@@ -232,49 +232,52 @@ input[type="range"].slider {
 }
 
 input[type="range"].slider::-webkit-slider-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  background: #334155;
+  border-radius: 6px;
   height: 8px;
+  border: 1px solid #475569;
 }
 
 input[type="range"].slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #7F39FB, #00FFD4);
+  background: linear-gradient(135deg, #FF1744, #ec4899);
   cursor: pointer;
-  margin-top: -6px;
-  box-shadow: 0 0 10px rgba(127, 57, 251, 0.5);
-  transition: all 0.2s ease;
+  margin-top: -8px;
+  box-shadow: 0 0 15px rgba(255, 23, 68, 0.6), 0 0 30px rgba(236, 72, 153, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid #fff;
 }
 
 input[type="range"].slider::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 20px rgba(127, 57, 251, 0.8);
+  transform: scale(1.3);
+  box-shadow: 0 0 25px rgba(255, 23, 68, 0.9), 0 0 50px rgba(236, 72, 153, 0.5);
 }
 
 input[type="range"].slider::-moz-range-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  background: #334155;
+  border-radius: 6px;
   height: 8px;
+  border: 1px solid #475569;
 }
 
 input[type="range"].slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #7F39FB, #00FFD4);
+  background: linear-gradient(135deg, #FF1744, #ec4899);
   cursor: pointer;
-  border: none;
-  box-shadow: 0 0 10px rgba(127, 57, 251, 0.5);
-  transition: all 0.2s ease;
+  border: 2px solid #fff;
+  box-shadow: 0 0 15px rgba(255, 23, 68, 0.6), 0 0 30px rgba(236, 72, 153, 0.3);
+  transition: all 0.3s ease;
 }
 
 input[type="range"].slider::-moz-range-thumb:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 20px rgba(127, 57, 251, 0.8);
+  transform: scale(1.3);
+  box-shadow: 0 0 25px rgba(255, 23, 68, 0.9), 0 0 50px rgba(236, 72, 153, 0.5);
 }
 
 /* Accessibility improvements */
