@@ -74,6 +74,7 @@ export default function AnimatedBackground({
       onMouseMove={handleMouseMove}
       style={{
         background: `linear-gradient(135deg, ${gradientFrom}, ${gradientVia}, ${gradientTo})`,
+        // @ts-expect-error - CSS custom properties
         '--tw-gradient-from': gradientFrom,
         '--tw-gradient-via': gradientVia,
         '--tw-gradient-to': gradientTo,
