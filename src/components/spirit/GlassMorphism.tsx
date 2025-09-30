@@ -101,6 +101,7 @@ const GlassMorphism = forwardRef<HTMLDivElement, GlassMorphismProps>(
       );
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const ElementComponent = Component as any;
 
     return (

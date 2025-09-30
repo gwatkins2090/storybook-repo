@@ -151,6 +151,7 @@ const ConsciousnessText = forwardRef<HTMLElement, ConsciousnessTextProps>(
     );
 
     // Create a motion component for the specific element type
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const MotionElement = motion(ElementType) as any;
 
     return (
