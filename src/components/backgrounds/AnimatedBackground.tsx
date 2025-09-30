@@ -84,27 +84,27 @@ export default function AnimatedBackground({
       {/* Sacred backgrounds with subtle parallax */}
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.div style={{ x: xFar, y: yFar }} className="absolute">
-          <FlowerOfLife 
-            size={flowerOfLifeSize} 
-            rings={flowerOfLifeRings} 
-            opacity={flowerOfLifeOpacity} 
-            spinSeconds={flowerOfLifeSpinSeconds} 
-            reduceMotion={prefers} 
-            direction={-1} 
-            strokeOpacityMult={1.35} 
-            strokeWidthMult={1.35} 
+          <FlowerOfLife
+            size={flowerOfLifeSize}
+            rings={flowerOfLifeRings}
+            opacity={flowerOfLifeOpacity}
+            spinSeconds={flowerOfLifeSpinSeconds}
+            reduceMotion={prefers ?? undefined}
+            direction={-1}
+            strokeOpacityMult={1.35}
+            strokeWidthMult={1.35}
           />
         </motion.div>
         <motion.div style={{ x: xNear, y: yNear }} className="absolute">
-          <Mandala 
-            size={mandalaSize} 
-            layers={mandalaLayers} 
-            opacity={mandalaOpacity} 
-            spinSeconds={mandalaSpinSeconds} 
-            reduceMotion={prefers} 
-            direction={1} 
-            strokeOpacityMult={1.4} 
-            strokeWidthMult={1.4} 
+          <Mandala
+            size={mandalaSize}
+            layers={mandalaLayers}
+            opacity={mandalaOpacity}
+            spinSeconds={mandalaSpinSeconds}
+            reduceMotion={prefers ?? undefined}
+            direction={1}
+            strokeOpacityMult={1.4}
+            strokeWidthMult={1.4}
           />
         </motion.div>
       </div>
