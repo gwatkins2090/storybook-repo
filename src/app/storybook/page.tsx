@@ -10,6 +10,7 @@ import { HeroBanner } from '@/components/hero';
 import Mandala from '@/components/sacred/Mandala';
 import FlowerOfLife from '@/components/sacred/FlowerOfLife';
 import { QuantumButton, GlassMorphism, ConsciousnessText } from '@/components/spirit';
+import { AnimatedBackground } from '@/components/backgrounds';
 
 // Story data structure
 interface Story {
@@ -92,6 +93,51 @@ export default function StorybookPage() {
   gradientTo="#1a0033"
   orbColor1="rgba(255,107,107,0.25)"
   orbColor2="rgba(255,193,7,0.18)"
+/>`
+        },
+        {
+          id: 'hero-full-featured',
+          title: 'Full Featured (Main Page)',
+          component: (
+            <div className="h-[600px] w-full">
+              <HeroBanner
+                title="Back To Sourcecode"
+                subtitle="Ethereal interfaces. Spirit-techno systems. Code that communes with the source."
+                chips={['Next.js 15', 'TypeScript', 'Framer Motion', 'Edge-first', 'AI-native']}
+                primaryCTA={{
+                  text: 'Explore Projects',
+                  href: '#projects',
+                }}
+                secondaryCTA={{
+                  text: 'About the Agent',
+                  onClick: () => console.log('About clicked'),
+                }}
+                showProfileImage={true}
+                profileImagePlaceholder="Add profile image at /public/images/profile.jpg"
+                showScrollIndicator={true}
+                scrollIndicatorText="SCROLL"
+                onScrollClick={() => console.log('Scroll clicked')}
+                minHeight="600px"
+              />
+            </div>
+          ),
+          code: `<HeroBanner
+  title="Back To Sourcecode"
+  subtitle="Ethereal interfaces. Spirit-techno systems. Code that communes with the source."
+  chips={['Next.js 15', 'TypeScript', 'Framer Motion', 'Edge-first', 'AI-native']}
+  primaryCTA={{
+    text: 'Explore Projects',
+    href: '#projects',
+  }}
+  secondaryCTA={{
+    text: 'About the Agent',
+    onClick: () => handleAboutClick(),
+  }}
+  showProfileImage={true}
+  profileImagePlaceholder="Add profile image at /public/images/profile.jpg"
+  showScrollIndicator={true}
+  scrollIndicatorText="SCROLL"
+  onScrollClick={() => handleScrollClick()}
 />`
         }
       ]
@@ -215,6 +261,71 @@ export default function StorybookPage() {
 />`
         }
       ]
+    },
+    {
+      id: 'backgrounds',
+      name: 'Backgrounds',
+      icon: <Sparkles className="w-4 h-4" />,
+      stories: [
+        {
+          id: 'animated-bg-default',
+          title: 'Animated Background - Default',
+          component: (
+            <div className="h-[600px] w-full">
+              <AnimatedBackground />
+            </div>
+          ),
+          code: `<AnimatedBackground />`
+        },
+        {
+          id: 'animated-bg-custom',
+          title: 'Animated Background - Custom Colors',
+          component: (
+            <div className="h-[600px] w-full">
+              <AnimatedBackground
+                gradientFrom="#1a0033"
+                gradientVia="#330066"
+                gradientTo="#1a0033"
+                orbColor1="rgba(255,107,107,0.3)"
+                orbColor2="rgba(255,193,7,0.25)"
+                mandalaOpacity={0.5}
+                flowerOfLifeOpacity={0.3}
+              />
+            </div>
+          ),
+          code: `<AnimatedBackground
+  gradientFrom="#1a0033"
+  gradientVia="#330066"
+  gradientTo="#1a0033"
+  orbColor1="rgba(255,107,107,0.3)"
+  orbColor2="rgba(255,193,7,0.25)"
+  mandalaOpacity={0.5}
+  flowerOfLifeOpacity={0.3}
+/>`
+        },
+        {
+          id: 'animated-bg-minimal',
+          title: 'Animated Background - Minimal',
+          component: (
+            <div className="h-[600px] w-full">
+              <AnimatedBackground
+                showOrbs={false}
+                mandalaOpacity={0.2}
+                flowerOfLifeOpacity={0.1}
+                mandalaLayers={6}
+                flowerOfLifeRings={4}
+              />
+            </div>
+          ),
+          code: `<AnimatedBackground
+  showOrbs={false}
+  mandalaOpacity={0.2}
+  flowerOfLifeOpacity={0.1}
+  mandalaLayers={6}
+  flowerOfLifeRings={4}
+/>`
+        }
+      ]
     }
   ];
 
@@ -304,13 +415,12 @@ export default function StorybookPage() {
                 {/* Search */}
                 <div className="p-6 border-b-2 border-[#334155]">
                   <div className="relative">
-                    <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#94a3b8]" />
                     <input
                       type="text"
-                      placeholder="Search components..."
+                      placeholder="🔍   Search components..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full pl-12 pr-4 py-3 bg-[#0f172a] border-2 border-[#334155] rounded-xl text-[#f8fafc] placeholder-[#94a3b8] focus:border-[#FF1744] focus:outline-none focus:shadow-[0_0_15px_rgba(255,23,68,0.2)] transition-all duration-300 text-base"
+                      className="w-full px-4 py-3 bg-[#0f172a] border-2 border-[#334155] rounded-xl text-[#f8fafc] placeholder-[#94a3b8] focus:border-[#FF1744] focus:outline-none focus:shadow-[0_0_15px_rgba(255,23,68,0.2)] transition-all duration-300 text-base"
                     />
                   </div>
                 </div>
