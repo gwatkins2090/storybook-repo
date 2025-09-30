@@ -89,7 +89,6 @@ const GlassMorphism = forwardRef<HTMLDivElement, GlassMorphismProps>(
 
     if (animated) {
       return (
-        {/* @ts-expect-error - Framer Motion transition type inference issue */}
         <motion.div
           ref={ref}
           className={cn(baseClasses, 'group')}
@@ -105,7 +104,6 @@ const GlassMorphism = forwardRef<HTMLDivElement, GlassMorphismProps>(
     const ElementComponent = Component as any;
 
     return (
-      {/* @ts-expect-error - Polymorphic component typing */}
       <ElementComponent
         ref={ref}
         className={cn(baseClasses, 'group')}

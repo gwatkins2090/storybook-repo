@@ -90,7 +90,6 @@ const QuantumButton = forwardRef<HTMLButtonElement | HTMLAnchorElement, QuantumB
 
     if (href) {
       return (
-        {/* @ts-expect-error - Framer Motion transition type inference issue */}
         <motion.a
           ref={ref as React.Ref<HTMLAnchorElement>}
           href={href}
@@ -107,7 +106,6 @@ const QuantumButton = forwardRef<HTMLButtonElement | HTMLAnchorElement, QuantumB
     }
 
     return (
-      {/* @ts-expect-error - Framer Motion transition type inference issue */}
       <motion.button
         ref={ref as React.Ref<HTMLButtonElement>}
         type={type}
