@@ -116,7 +116,7 @@ export default function StorybookPage() {
             <div className="h-[600px] w-full">
               <HeroBanner
                 title="Back To Sourcecode"
-                subtitle="Learn more about Ellis Dee, Lead Quantum Infrastructure Designer. Building scalable quantum architectures for the next computing revolution. Specializing in qubit orchestration, superposition frameworks, and qubit orchestration gate fidelity to unlock quantum advantage at galactic scale."
+                subtitle="Learn more about Ellis Dee, Lead Quantum Infrastructure Designer. Building scalable quantum architectures for the next computing revolution. Specializing in superposition frameworks and qubit orchestration to unlock quantum advantage at galactic scale."
                 chips={['Next.js 15', 'TypeScript', 'Framer Motion', 'Edge-first', 'AI-native']}
                 primaryCTA={{
                   text: 'Explore Projects',
@@ -137,7 +137,7 @@ export default function StorybookPage() {
           ),
           code: `<HeroBanner
   title="Back To Sourcecode"
-  subtitle="Learn more about Ellis Dee, Lead Quantum Infrastructure Designer. Building scalable quantum architectures for the next computing revolution. Specializing in qubit orchestration, superposition frameworks, and qubit orchestration gate fidelity to unlock quantum advantage at galactic scale."
+  subtitle="Learn more about Ellis Dee, Lead Quantum Infrastructure Designer. Building scalable quantum architectures for the next computing revolution. Specializing in superposition frameworks and qubit orchestration to unlock quantum advantage at galactic scale."
   chips={['Next.js 15', 'TypeScript', 'Framer Motion', 'Edge-first', 'AI-native']}
   primaryCTA={{
     text: 'Explore Projects',
