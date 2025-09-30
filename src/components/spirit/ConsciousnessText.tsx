@@ -4,7 +4,7 @@ import { useEffect, useState, forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
-interface ConsciousnessTextProps {
+export interface ConsciousnessTextProps {
   text: string;
   className?: string;
   variant?: 'heading' | 'body' | 'code' | 'mystical';

@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useTranscendenceStore } from '@/lib/transcendence/store';
 
-interface RealityParticleSystemProps {
+export interface RealityParticleSystemProps {
   count?: number;
   type?: 'consciousness' | 'code' | 'energy' | 'quantum' | 'reality-glitch';
   interactive?: boolean;

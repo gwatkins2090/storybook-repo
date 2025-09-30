@@ -9,7 +9,7 @@ import { SacredGeometry3D } from './SacredGeometry3D';
 import { RealityParticleSystem } from './RealityParticleSystem';
 import * as THREE from 'three';
 
-interface QuantumSceneProps {
+export interface QuantumSceneProps {
   children?: React.ReactNode;
   enableControls?: boolean;
   enableEffects?: boolean;

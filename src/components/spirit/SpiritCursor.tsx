@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { useTranscendenceStore } from '@/lib/transcendence/store';
 
-interface SpiritCursorProps {
+export interface SpiritCursorProps {
   className?: string;
 }
 

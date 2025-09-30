@@ -6,7 +6,7 @@ import { Points, PointMaterial, Line, Text } from '@react-three/drei';
 import * as THREE from 'three';
 import { useTranscendenceStore } from '@/lib/transcendence/store';
 
-interface ConsciousnessMandalaProps {
+export interface ConsciousnessMandalaProps {
   layers?: number;
   scale?: number;
   interactive?: boolean;

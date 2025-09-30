@@ -9,7 +9,7 @@ export { RealityParticleSystem } from './RealityParticleSystem';
 export { QuantumScene, QuantumLoader } from './QuantumScene';
 
 // Re-export types for convenience
-export type { default as SacredGeometry3DProps } from './SacredGeometry3D';
-export type { default as ConsciousnessMandalaProps } from './ConsciousnessMandala';
-export type { default as RealityParticleSystemProps } from './RealityParticleSystem';
-export type { default as QuantumSceneProps } from './QuantumScene';
+export type { SacredGeometry3DProps } from './SacredGeometry3D';
+export type { ConsciousnessMandalaProps } from './ConsciousnessMandala';
+export type { RealityParticleSystemProps } from './RealityParticleSystem';
+export type { QuantumSceneProps } from './QuantumScene';

@@ -4,7 +4,7 @@ import { forwardRef, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
-interface GlassMorphismProps {
+export interface GlassMorphismProps {
   children: ReactNode;
   className?: string;
   intensity?: 'low' | 'medium' | 'high' | 'consciousness';

@@ -4,7 +4,7 @@ import { forwardRef, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
-interface QuantumButtonProps {
+export interface QuantumButtonProps {
   children: ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'consciousness';
   size?: 'sm' | 'md' | 'lg' | 'xl';

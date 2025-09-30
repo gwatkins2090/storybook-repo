@@ -10,7 +10,7 @@ export { GlassMorphism } from './GlassMorphism';
 export { ConsciousnessText } from './ConsciousnessText';
 
 // Re-export types for convenience
-export type { default as SpiritCursorProps } from './SpiritCursor';
-export type { default as QuantumButtonProps } from './QuantumButton';
-export type { default as GlassMorphismProps } from './GlassMorphism';
-export type { default as ConsciousnessTextProps } from './ConsciousnessText';
+export type { SpiritCursorProps } from './SpiritCursor';
+export type { QuantumButtonProps } from './QuantumButton';
+export type { GlassMorphismProps } from './GlassMorphism';
+export type { ConsciousnessTextProps } from './ConsciousnessText';

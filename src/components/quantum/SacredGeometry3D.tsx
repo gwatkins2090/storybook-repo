@@ -6,7 +6,7 @@ import { Points, PointMaterial, Line } from '@react-three/drei';
 import * as THREE from 'three';
 import { useTranscendenceStore } from '@/lib/transcendence/store';
 
-interface SacredGeometry3DProps {
+export interface SacredGeometry3DProps {
   type: 'mandala' | 'flower-of-life' | 'metatrons-cube' | 'platonic-solid' | 'sri-yantra';
   scale?: number;
   animated?: boolean;
