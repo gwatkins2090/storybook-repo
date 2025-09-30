@@ -19,7 +19,6 @@ interface FlowerOfLifeProps {
 export default function FlowerOfLife({
   size = 900,
   rings = 3,
-  stroke = '#9b87f5',
   opacity = 0.18,
   className = '',
   spinSeconds = 80,

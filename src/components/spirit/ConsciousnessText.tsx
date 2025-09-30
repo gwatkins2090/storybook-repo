@@ -153,7 +153,7 @@ const ConsciousnessText = forwardRef<HTMLElement, ConsciousnessTextProps>(
     return (
       <motion.div {...motionProps}>
         <ElementType
-          ref={ref as any}
+          ref={ref as React.Ref<HTMLElement>}
           className={baseClasses}
           data-text={glitch ? text : undefined}
           {...props}

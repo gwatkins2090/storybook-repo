@@ -14,12 +14,11 @@ interface ConsciousnessMandalaProps {
   consciousness?: boolean;
 }
 
-export function ConsciousnessMandala({ 
-  layers = 12, 
-  scale = 1, 
+export function ConsciousnessMandala({
+  layers = 12,
+  scale = 1,
   interactive = true,
   showSymbols = true,
-  consciousness = true
 }: ConsciousnessMandalaProps) {
   const groupRef = useRef<THREE.Group>(null);
   const { agent, ui } = useTranscendenceStore();

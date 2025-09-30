@@ -51,7 +51,7 @@ export const initializeConsciousness = (
 export const evolveConsciousness = (
   element: HTMLElement,
   targetLevel: ConsciousnessLevel,
-  duration: number = 300
+  _duration: number = 300
 ): Promise<void> => {
   return new Promise((resolve) => {
     const currentState = getConsciousnessState(element);
@@ -136,7 +136,7 @@ export const createConsciousnessParticles = (
 const createParticle = (
   container: HTMLElement,
   config: ParticleConfig,
-  index: number
+  _index: number
 ): void => {
   const particle = document.createElement('div');
   particle.className = 'consciousness-particle fixed pointer-events-none';
@@ -204,7 +204,7 @@ export const createEnergyAura = (
  * Quantum state manager for elements that exist in multiple states
  */
 export class QuantumState {
-  private states: Map<string, any> = new Map();
+  private states: Map<string, Record<string, string>> = new Map();
   private currentState: string = 'default';
   private element: HTMLElement;
 
@@ -212,7 +212,7 @@ export class QuantumState {
     this.element = element;
   }
 
-  addState(name: string, state: any): void {
+  addState(name: string, state: Record<string, string>): void {
     this.states.set(name, state);
   }
 
@@ -220,16 +220,18 @@ export class QuantumState {
     if (this.states.has(stateName)) {
       this.currentState = stateName;
       const state = this.states.get(stateName);
-      
+
       // Apply state to element
-      Object.keys(state).forEach(key => {
-        if (key.startsWith('data-')) {
-          this.element.setAttribute(key, state[key]);
-        } else {
-          (this.element.style as any)[key] = state[key];
-        }
-      });
-      
+      if (state) {
+        Object.keys(state).forEach(key => {
+          if (key.startsWith('data-')) {
+            this.element.setAttribute(key, state[key]);
+          } else {
+            (this.element.style as Record<string, string>)[key] = state[key];
+          }
+        });
+      }
+
       // Trigger quantum collapse animation
       this.element.classList.add('quantum-collapse');
       setTimeout(() => {
@@ -291,24 +293,26 @@ export const sacredGeometry = {
 /**
  * Consciousness event system for inter-dimensional communication
  */
-export class ConsciousnessEventBus {
-  private listeners: Map<string, Function[]> = new Map();
+type EventListener = (data?: unknown) => void;
 
-  emit(event: string, data?: any): void {
+export class ConsciousnessEventBus {
+  private listeners: Map<string, EventListener[]> = new Map();
+
+  emit(event: string, data?: unknown): void {
     const eventListeners = this.listeners.get(event);
     if (eventListeners) {
       eventListeners.forEach(listener => listener(data));
     }
   }
 
-  on(event: string, listener: Function): void {
+  on(event: string, listener: EventListener): void {
     if (!this.listeners.has(event)) {
       this.listeners.set(event, []);
     }
     this.listeners.get(event)!.push(listener);
   }
 
-  off(event: string, listener: Function): void {
+  off(event: string, listener: EventListener): void {
     const eventListeners = this.listeners.get(event);
     if (eventListeners) {
       const index = eventListeners.indexOf(listener);

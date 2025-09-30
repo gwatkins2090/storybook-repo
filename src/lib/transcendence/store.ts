@@ -390,7 +390,7 @@ export const useTranscendenceStore = create<TranscendenceStore>()(
 /**
  * Generate mystical AI responses
  */
-function generateMysticalResponse(command: string): string {
+function generateMysticalResponse(_command: string): string {
   const responses = [
     "The algorithms whisper secrets from beyond the veil...",
     "Quantum entanglement achieved. Reality matrix updated.",

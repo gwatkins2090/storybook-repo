@@ -101,8 +101,8 @@ const GlassMorphism = forwardRef<HTMLDivElement, GlassMorphismProps>(
       );
     }
 
-    const ElementComponent = Component as any;
-    
+    const ElementComponent = Component as React.ElementType;
+
     return (
       <ElementComponent
         ref={ref}

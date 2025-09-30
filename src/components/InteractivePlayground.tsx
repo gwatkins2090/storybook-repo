@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Sliders, RefreshCw } from 'lucide-react';
 import Mandala from '@/components/sacred/Mandala';
 import FlowerOfLife from '@/components/sacred/FlowerOfLife';

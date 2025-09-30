@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useMemo, useEffect } from 'react';
+import { useRef, useMemo } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { Points, PointMaterial, Line } from '@react-three/drei';
 import * as THREE from 'three';
@@ -251,7 +251,7 @@ function generateMetatronsCube() {
 }
 
 // Generate Platonic Solid (Icosahedron)
-function generatePlatonicSolid(type: 'tetrahedron' | 'cube' | 'octahedron' | 'dodecahedron' | 'icosahedron') {
+function generatePlatonicSolid(_type: 'tetrahedron' | 'cube' | 'octahedron' | 'dodecahedron' | 'icosahedron') {
   const points: THREE.Vector3[] = [];
   const lines: THREE.Vector3[][] = [];
   

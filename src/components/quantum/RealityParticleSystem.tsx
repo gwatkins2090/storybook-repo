@@ -2,7 +2,6 @@
 
 import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Points, PointMaterial, Instances, Instance } from '@react-three/drei';
 import * as THREE from 'three';
 import { useTranscendenceStore } from '@/lib/transcendence/store';
 

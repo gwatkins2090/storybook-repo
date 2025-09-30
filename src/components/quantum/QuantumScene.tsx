@@ -17,14 +17,14 @@ interface QuantumSceneProps {
   className?: string;
 }
 
-export function QuantumScene({ 
-  children, 
-  enableControls = false, 
+export function QuantumScene({
+  children,
+  enableControls = false,
   enableEffects = true,
   background = 'void',
   className = ''
 }: QuantumSceneProps) {
-  const { agent, ui } = useTranscendenceStore();
+  const { agent } = useTranscendenceStore();
 
   const getBackgroundColor = () => {
     switch (background) {

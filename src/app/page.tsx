@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  ChevronDown, ChevronRight, Code2, Sparkles, Box, Type,
-  Search, Settings, Menu, Copy, MousePointer2, Shapes, Hand
+  ChevronRight, Code2, Sparkles, Box, Type,
+  Settings, Menu, Copy, MousePointer2, Shapes, Hand
 } from 'lucide-react';
 import { HeroBanner } from '@/components/hero';
 import Mandala from '@/components/sacred/Mandala';

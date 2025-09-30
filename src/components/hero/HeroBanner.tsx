@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion, useReducedMotion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 import Mandala from '@/components/sacred/Mandala';
 import FlowerOfLife from '@/components/sacred/FlowerOfLife';
 
@@ -123,7 +124,7 @@ export default function HeroBanner({
       className={`relative flex items-center justify-center overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] ${className}`}
       style={{
         minHeight,
-        // @ts-ignore - CSS custom properties
+        // @ts-expect-error - CSS custom properties
         '--tw-gradient-from': gradientFrom,
         '--tw-gradient-via': gradientVia,
         '--tw-gradient-to': gradientTo,
@@ -256,7 +257,7 @@ export default function HeroBanner({
               <div>
                 <div className="relative w-56 h-56 md:w-72 md:h-72 mx-auto rounded-full overflow-hidden border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
                   {profileImageUrl ? (
-                    <img src={profileImageUrl} alt="Profile" className="w-full h-full object-cover" />
+                    <Image src={profileImageUrl} alt="Profile" fill className="object-cover" />
                   ) : (
                     <>
                       <div className="absolute inset-0 bg-gradient-to-br from-[#7F39FB]/35 to-[#00FFD4]/35" />
