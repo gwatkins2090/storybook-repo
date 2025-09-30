@@ -227,7 +227,7 @@ export class QuantumState {
           if (key.startsWith('data-')) {
             this.element.setAttribute(key, state[key]);
           } else {
-            (this.element.style as Record<string, string>)[key] = state[key];
+            (this.element.style as unknown as Record<string, string>)[key] = state[key];
           }
         });
       }

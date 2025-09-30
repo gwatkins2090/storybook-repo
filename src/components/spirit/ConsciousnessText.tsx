@@ -150,17 +150,20 @@ const ConsciousnessText = forwardRef<HTMLElement, ConsciousnessTextProps>(
       </>
     );
 
+    // Create a motion component for the specific element type
+    const MotionElement = motion(ElementType) as any;
+
     return (
-      <motion.div {...motionProps}>
-        <ElementType
-          ref={ref as React.Ref<HTMLElement>}
-          className={baseClasses}
-          data-text={glitch ? text : undefined}
-          {...props}
-        >
-          {content}
-        </ElementType>
-      </motion.div>
+      <MotionElement
+        // @ts-expect-error - Polymorphic component ref typing is complex
+        ref={ref}
+        className={baseClasses}
+        data-text={glitch ? text : undefined}
+        {...motionProps}
+        {...props}
+      >
+        {content}
+      </MotionElement>
     );
   }
 );

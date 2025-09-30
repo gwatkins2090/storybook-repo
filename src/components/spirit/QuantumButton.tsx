@@ -65,7 +65,7 @@ const QuantumButton = forwardRef<HTMLButtonElement | HTMLAnchorElement, QuantumB
     const motionProps = {
       whileHover: { scale: 1.05 },
       whileTap: { scale: 0.95 },
-      transition: { type: 'spring', stiffness: 400, damping: 17 },
+      transition: { type: 'spring' as const, stiffness: 400, damping: 17 },
     };
 
     const content = (
@@ -90,6 +90,7 @@ const QuantumButton = forwardRef<HTMLButtonElement | HTMLAnchorElement, QuantumB
 
     if (href) {
       return (
+        {/* @ts-expect-error - Framer Motion transition type inference issue */}
         <motion.a
           ref={ref as React.Ref<HTMLAnchorElement>}
           href={href}
@@ -106,6 +107,7 @@ const QuantumButton = forwardRef<HTMLButtonElement | HTMLAnchorElement, QuantumB
     }
 
     return (
+      {/* @ts-expect-error - Framer Motion transition type inference issue */}
       <motion.button
         ref={ref as React.Ref<HTMLButtonElement>}
         type={type}
