@@ -1,11 +1,11 @@
 /**
  * HeroBanner Component Examples
- * 
+ *
  * This file contains various usage examples of the HeroBanner component.
  * Copy and modify these examples for your own projects.
  */
 
-import { HeroBanner } from './HeroBanner';
+import HeroBanner from './HeroBanner';
 
 // Example 1: Basic Usage
 export function BasicHero() {
