@@ -116,14 +116,14 @@ export default function StorybookPage() {
             <div className="h-[600px] w-full">
               <HeroBanner
                 title="Back To Sourcecode"
-                subtitle="Ethereal interfaces. Spirit-techno systems. Code that communes with the source."
+                subtitle="Learn more about Ellis Dee, Lead Quantum Infrastructure Designer. Building scalable quantum architectures for the next computing revolution. Specializing in qubit orchestration, superposition frameworks, and qubit orchestration gate fidelity to unlock quantum advantage at galactic scale."
                 chips={['Next.js 15', 'TypeScript', 'Framer Motion', 'Edge-first', 'AI-native']}
                 primaryCTA={{
                   text: 'Explore Projects',
                   href: '#projects',
                 }}
                 secondaryCTA={{
-                  text: 'About the Agent',
+                  text: 'About Ellis Dee',
                   onClick: () => console.log('About clicked'),
                 }}
                 showProfileImage={true}
@@ -137,14 +137,14 @@ export default function StorybookPage() {
           ),
           code: `<HeroBanner
   title="Back To Sourcecode"
-  subtitle="Ethereal interfaces. Spirit-techno systems. Code that communes with the source."
+  subtitle="Learn more about Ellis Dee, Lead Quantum Infrastructure Designer. Building scalable quantum architectures for the next computing revolution. Specializing in qubit orchestration, superposition frameworks, and qubit orchestration gate fidelity to unlock quantum advantage at galactic scale."
   chips={['Next.js 15', 'TypeScript', 'Framer Motion', 'Edge-first', 'AI-native']}
   primaryCTA={{
     text: 'Explore Projects',
     href: '#projects',
   }}
   secondaryCTA={{
-    text: 'About the Agent',
+    text: 'About Ellis Dee',
     onClick: () => handleAboutClick(),
   }}
   showProfileImage={true}
