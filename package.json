@@ -1,12 +1,35 @@
 {
-  "name": "bts",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@your-org/component-library",
+  "version": "1.0.0",
+  "description": "A beautiful collection of reusable React components featuring hero banners, sacred geometry, spirit UI elements, and 3D quantum visualizations",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/components"
+  ],
+  "keywords": [
+    "react",
+    "nextjs",
+    "components",
+    "ui",
+    "component-library",
+    "typescript",
+    "framer-motion",
+    "three.js",
+    "sacred-geometry"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/component-library"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
+    "build:lib": "tsc --project tsconfig.lib.json",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prepublishOnly": "npm run build:lib"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Component Library
 
-## Getting Started
+A beautiful collection of reusable React components featuring hero banners, sacred geometry, spirit UI elements, and 3D quantum visualizations. Built with Next.js 15, TypeScript, and Framer Motion.
 
-First, run the development server:
+## ��� Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+- **Hero Banners**: Full-featured, customizable hero sections with sacred geometry backgrounds
+- **Sacred Geometry**: Mandala and Flower of Life components with interactive controls
+- **Spirit UI**: Glassmorphic buttons, containers, and text effects
+- **3D Quantum**: Three.js-powered 3D visualizations and particle systems
+- **Interactive Playground**: Live component customization and code generation
+- **TypeScript**: Full type safety and IntelliSense support
+- **Framer Motion**: Smooth animations and transitions
+- **Tailwind CSS**: Utility-first styling with custom theme
+
+## ��� Quick Start
+
+### Development Mode
+
+Run the component showcase locally:
+
+\`\`\`bash
+# Install dependencies
+pnpm install
+
+# Start development server
 pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the interactive component library.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Using in Your Next.js Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### Option 1: Copy Components Directly (Recommended)
 
-## Learn More
+1. Copy the \`src/components\` folder to your project
+2. Copy the required dependencies from \`package.json\`
+3. Import components using your project's path alias
 
-To learn more about Next.js, take a look at the following resources:
+#### Option 2: Install as Package
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If published to npm or installed from GitHub.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ��� Components
 
-## Deploy on Vercel
+See the interactive showcase for full documentation and examples.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ���️ Development
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Project Structure
+
+\`\`\`
+src/
+├── components/          # All reusable components
+│   ├── hero/           # Hero banner components
+│   ├── sacred/         # Sacred geometry components
+│   ├── spirit/         # Spirit UI components
+│   ├── quantum/        # 3D quantum components
+│   └── backgrounds/    # Background components
+├── lib/                # Utility functions
+└── app/                # Next.js app (component showcase)
+\`\`\`
+
+## ��� License
+
+MIT

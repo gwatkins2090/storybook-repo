@@ -4,6 +4,7 @@
  */
 
 export { SpiritCursor } from './SpiritCursor';
+export { SpiritCursorDemo } from './SpiritCursorDemo';
 export { QuantumButton } from './QuantumButton';
 export { GlassMorphism } from './GlassMorphism';
 export { ConsciousnessText } from './ConsciousnessText';

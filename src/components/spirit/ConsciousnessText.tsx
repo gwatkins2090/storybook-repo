@@ -79,7 +79,7 @@ const ConsciousnessText = forwardRef<HTMLElement, ConsciousnessTextProps>(
         'font-orbitron font-bold uppercase tracking-wider': variant === 'heading',
         'font-space-mono': variant === 'body' || variant === 'code',
         'font-orbitron font-black uppercase tracking-widest': variant === 'mystical',
-        
+
         // Sizes
         'text-xs': size === 'xs',
         'text-sm': size === 'sm',
@@ -90,12 +90,12 @@ const ConsciousnessText = forwardRef<HTMLElement, ConsciousnessTextProps>(
         'text-3xl': size === '3xl',
         'text-4xl': size === '4xl',
         'text-5xl': size === '5xl',
-        
-        // Effects
-        'bg-gradient-to-r from-cosmic-purple via-astral-blue to-astral-teal bg-clip-text text-transparent animate-gradient-shift': gradient,
+
+        // Effects - gradient with better visibility
+        'bg-gradient-to-r from-[#FF1744] via-[#ec4899] to-[#FF3838] bg-clip-text text-transparent animate-gradient-shift': gradient,
         'animate-consciousness-pulse': consciousness,
         'glitch-text': glitch,
-        
+
         // Code styling
         'bg-void-black/50 px-2 py-1 rounded border border-cosmic-purple/30 font-mono text-astral-teal': variant === 'code',
       },
