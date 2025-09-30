@@ -154,14 +154,22 @@ export function ConsciousnessMandala({
           return pointIndex >= layerStart && pointIndex < layerEnd;
         });
 
+        // Convert Vector3[] to Float32Array for Points component
+        const positions = new Float32Array(layerPoints.length * 3);
+        layerPoints.forEach((point, i) => {
+          positions[i * 3] = point.x;
+          positions[i * 3 + 1] = point.y;
+          positions[i * 3 + 2] = point.z;
+        });
+
         const colors = [
-          '#FFD700', '#FF6B35', '#FF0000', '#FF00FF', '#7F39FB', 
+          '#FFD700', '#FF6B35', '#FF0000', '#FF00FF', '#7F39FB',
           '#00D4FF', '#00FFD4', '#00FF00', '#FFFF00', '#FFA500',
           '#FF1493', '#9370DB'
         ];
 
         return (
-          <Points key={layerIndex} positions={layerPoints}>
+          <Points key={layerIndex} positions={positions}>
             <PointMaterial
               size={0.015 + layerIndex * 0.002}
               color={colors[layerIndex % colors.length]}
