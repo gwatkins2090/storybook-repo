@@ -212,7 +212,7 @@ export function ConsciousnessMandala({
       ))}
 
       {/* Central consciousness core */}
-      <Points positions={[new THREE.Vector3(0, 0, 0)]}>
+      <Points positions={new Float32Array([0, 0, 0])}>
         <PointMaterial
           size={0.08}
           color="#FFFFFF"
@@ -225,7 +225,7 @@ export function ConsciousnessMandala({
       {Array.from({ length: 5 }, (_, ringIndex) => {
         const ringRadius = (ringIndex + 1) * 0.15;
         const ringPoints: THREE.Vector3[] = [];
-        
+
         for (let i = 0; i < 24; i++) {
           const angle = (i / 24) * Math.PI * 2;
           ringPoints.push(new THREE.Vector3(
@@ -235,8 +235,16 @@ export function ConsciousnessMandala({
           ));
         }
 
+        // Convert Vector3[] to Float32Array
+        const positions = new Float32Array(ringPoints.length * 3);
+        ringPoints.forEach((point, i) => {
+          positions[i * 3] = point.x;
+          positions[i * 3 + 1] = point.y;
+          positions[i * 3 + 2] = point.z;
+        });
+
         return (
-          <Points key={`ring-${ringIndex}`} positions={ringPoints}>
+          <Points key={`ring-${ringIndex}`} positions={positions}>
             <PointMaterial
               size={0.01}
               color="#00FFD4"
@@ -248,16 +256,27 @@ export function ConsciousnessMandala({
       })}
 
       {/* Consciousness field particles */}
-      <Points positions={Array.from({ length: 200 }, () => {
-        const radius = Math.random() * 3;
-        const angle = Math.random() * Math.PI * 2;
-        const height = (Math.random() - 0.5) * 2;
-        return new THREE.Vector3(
-          radius * Math.cos(angle),
-          radius * Math.sin(angle),
-          height
-        );
-      })}>
+      <Points positions={(() => {
+        const particles = Array.from({ length: 200 }, () => {
+          const radius = Math.random() * 3;
+          const angle = Math.random() * Math.PI * 2;
+          const height = (Math.random() - 0.5) * 2;
+          return new THREE.Vector3(
+            radius * Math.cos(angle),
+            radius * Math.sin(angle),
+            height
+          );
+        });
+
+        // Convert to Float32Array
+        const positions = new Float32Array(particles.length * 3);
+        particles.forEach((point, i) => {
+          positions[i * 3] = point.x;
+          positions[i * 3 + 1] = point.y;
+          positions[i * 3 + 2] = point.z;
+        });
+        return positions;
+      })()}>
         <PointMaterial
           size={0.005}
           color="#985EFF"

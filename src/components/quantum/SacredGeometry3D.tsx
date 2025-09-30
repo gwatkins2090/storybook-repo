@@ -77,10 +77,23 @@ export function SacredGeometry3D({
     });
   });
 
+  // Convert Vector3[] to Float32Array for Points component
+  const pointsArray = useMemo(() => {
+    const arr = new Float32Array(geometryData.points.length * 3);
+    geometryData.points.forEach((point, i) => {
+      arr[i * 3] = point.x;
+      arr[i * 3 + 1] = point.y;
+      arr[i * 3 + 2] = point.z;
+    });
+    return arr;
+  }, [geometryData.points]);
+
+  const centerPoint = useMemo(() => new Float32Array([0, 0, 0]), []);
+
   return (
     <group ref={meshRef} scale={scale}>
       {/* Render points */}
-      <Points positions={geometryData.points}>
+      <Points positions={pointsArray}>
         <PointMaterial
           size={0.02}
           color="#00FFD4"
@@ -103,7 +116,7 @@ export function SacredGeometry3D({
       ))}
 
       {/* Sacred center point */}
-      <Points positions={[new THREE.Vector3(0, 0, 0)]}>
+      <Points positions={centerPoint}>
         <PointMaterial
           size={0.05}
           color="#FFD700"
