@@ -1,7 +1,7 @@
-# Export/Import Fixes - Build #8
+# Export/Import Fixes - Builds #8 & #9
 
-**Date:** 2025-09-30  
-**Issue:** Type export mismatches in index.ts files  
+**Date:** 2025-09-30
+**Issues:** Type export mismatches + Framer Motion type error
 **Status:** ✅ FIXED
 
 ---
@@ -129,7 +129,45 @@ Exit Code: 0 ✅
 
 ---
 
+## 🐛 Build #9 - Framer Motion Type Error
+
+**Error:**
+```
+Type error: Type '{ duration: number; delay: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+  Types of property 'ease' are incompatible.
+    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+
+File: src/components/spirit/ConsciousnessText.tsx:154
+```
+
+**Root Cause:**
+Framer Motion's `ease` property expects a specific type (cubic bezier tuple), not a plain `number[]`.
+
+**Fix:**
+Added `as const` assertion to make the array a readonly tuple:
+
+```typescript
+// Before:
+transition: {
+  duration: 0.6,
+  delay: delay / 1000,
+  ease: [0.25, 0.46, 0.45, 0.94]  // ❌ Type: number[]
+},
+
+// After:
+transition: {
+  duration: 0.6,
+  delay: delay / 1000,
+  ease: [0.25, 0.46, 0.45, 0.94] as const  // ✅ Type: readonly [0.25, 0.46, 0.45, 0.94]
+},
+```
+
+**File Modified:**
+- `src/components/spirit/ConsciousnessText.tsx` (line 111)
+
+---
+
 ## 🚀 Ready for Deployment
 
-The project is now ready for Vercel deployment with all export/import issues resolved.
+The project is now ready for Vercel deployment with all export/import and type issues resolved.
 
